@@ -11,3 +11,6 @@ Desafio proposto:
  - [x] Mostrar informações adicionar como por exemplo: velocidade do vendo, visibilidade, humidade e etc!! Sinta-se livre para mostrar as informações que  você quiser.
  - [x] Limpar o campo de busca após clicar no botão buscar.
  - [ ] Informar para o usuário quando ocorreu algum erro na requisição ou não foi encontrada a cidade.
+
+Link do projeto: <strong><a href="https://react-previsao-do-tempo.vercel.app/">Previsão do Tempo</a></strong>
+

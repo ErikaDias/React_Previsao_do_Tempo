@@ -13,7 +13,7 @@ function App() {
 
         setIsLoading(true); 
 
-        fetch(`http://api.weatherapi.com/v1/current.json?key=40970cb891974c189ce231903212610&q=${city}&lang=pt`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=40970cb891974c189ce231903212610&q=${city}&lang=pt`)
         .then((response) => {
             if(response.status === 200){
                 return response.json();
