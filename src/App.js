@@ -31,46 +31,43 @@ function App() {
     
     return (
         <div>
-            <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-6">
-                <a className="navbar-brand" href="#search">
-                    Previsão do Tempo
-                </a>
-            </nav>
-
-            <main className="container" id="search">
-
-                <div className="jumbotron mt-2">
+            <main>
+                <nav class="navbar">
                     <h1>Verifique agora a previsão do tempo na sua cidade!</h1>
-                    <p className="lead">Digite a sua cidade e clique no botão pesquisar.</p>
-
-                    <div className="row md-4">
-                        <div className="col mb-6">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control " aria-describedby="button" value={city} onChange={hundleCityChange}/>
-                                <button class="bbtn btn btn-dark" onClick={searchWeather}> {isLoading ? 'Pesquisando..' : 'Pesquisar'}</button>
-                            </div>
+                </nav>     
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="search">
+                            <input type="text" value={city} onChange={hundleCityChange} placeholder="Digite o nome da cidade"/>
+                            <button onClick={searchWeather}>{isLoading ? 'Pesquisando..' : 'Pesquisar'}</button>
+                        </div>
+                        <div>
                             {
                                 weatherForecast ? (
-                                    <div className="mt-4 d-flex">
-                                        <div className="col-sm-1">
-                                            <img className="rounded float-left" src={weatherForecast.current.condition.icon} alt="Weather Icon" />
+                                    <div class="result">
+                                        <div class="item1">
+                                            <p>Tempo agora em {weatherForecast.location.name}</p>
                                         </div>
-                                        <div>
-                                            <h3 className="mb-4">Hoje o dia está: {weatherForecast.current.condition.text} </h3>
-                                            <p className="lead">Tempo: {weatherForecast.current.temp_c} Cº</p>
-                                            <p className="lead">Valocidade: {weatherForecast.current.wind_kph} Km/h - {weatherForecast.current.wind_mph} Mi/h</p>
-                                            <p className="lead">{weatherForecast.location.name} - {weatherForecast.location.region} - {weatherForecast.location.country}</p>
-                                            <p className="lead">{weatherForecast.location.localtime}</p>
+                                        <div class="item2">
+                                            <img src={weatherForecast.current.condition.icon} alt="Weather Icon"/>
+                                        </div>
+                                        <div class="item3">
+                                            <p>{weatherForecast.current.temp_c} Cº</p>
+                                        </div>
+                                        <div class="item4">
+                                            <p>{weatherForecast.current.condition.text}</p>
+                                            <p>Vento: {weatherForecast.current.wind_kph} Km/h - {weatherForecast.current.wind_mph} Mi/h</p>
+                                            <p>Data/Hora: {weatherForecast.location.localtime}</p>
                                         </div>
                                     </div>
-                                ) : null                                
+                                ) : null
                             }
                         </div>
                     </div>
                 </div>
             </main>
-            <footer className="footer-copyright text-center py-3">
-                Desenvolvido por <strong>Erika Dias</strong> - Workshop EBAC
+            <footer class="footer">
+                Desenvolvido por Erika Dias - Workshop EBAC
             </footer>
         </div>
     );

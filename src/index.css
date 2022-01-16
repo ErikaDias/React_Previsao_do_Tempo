@@ -1,0 +1,153 @@
+*, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(backgroud.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #eeeeee;
+    height: 100vh;
+}
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(48, 48, 48, 0.5);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar h1{
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.container-fluid{
+    width: 50vw;
+    background-color: rgba(48, 48, 48, 0.5);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search input{
+    width: 75%;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.search button{
+    width: 10vw;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(48, 48, 48, 0.5);
+    color: #eeeeee;
+}
+
+.result{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 20px 10px;
+}
+
+.item2 img{
+    width: 120%;
+}
+
+.item3{
+    font-size: 2.2rem;
+}
+
+.item1 {
+    grid-column: span 4;
+    font-size: 1.8rem;
+}
+
+.footer{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 1000px){
+    .item1{
+        font-size: 1.6rem;
+    }
+
+    .item2 img{
+        width: 100%;
+    }
+    
+    .item3{
+        font-size: 1.2rem;
+    }
+
+    .item4{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 768px){
+    .navbar{
+        text-align: center;
+    }
+   
+    .container-fluid{
+        width: 80vw;
+        padding: 10px;
+        margin: 15px 5px;
+    }
+    .search{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search input{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    
+    .search button{
+        width: 70%;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .result{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .item1{
+        text-align: center;
+    }    
+}
+
